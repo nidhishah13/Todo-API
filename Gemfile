@@ -11,6 +11,8 @@ gem 'rails', '~> 5.1.5'
 gem 'jwt'
 #gem 'knock'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'will_paginate', '~> 3.1.0'
+gem 'faker'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

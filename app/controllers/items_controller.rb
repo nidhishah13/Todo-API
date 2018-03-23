@@ -14,14 +14,15 @@ class ItemsController < ApplicationController
 
   # POST /todos/:todo_id/items
   def create
-    @todo.items.create!(item_params)
-    json_response(@todo, :created)
+    item = @todo.items.create!(item_params)
+    json_response(item, :created)
   end
 
   # PUT /todos/:todo_id/items/:id
   def update
     @item.update(item_params)
-    head :no_content
+    json_response(@item, :ok)
+    # head :no_content
   end
 
   # DELETE /todos/:todo_id/items/:id

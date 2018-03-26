@@ -2,6 +2,7 @@ module V1
   class TodosController < ApplicationController
     before_action :set_todo, only: [:show, :update, :destroy]
     before_action :authorize_request
+    set_pagination_headers :todos, only: [:index]
 
     # GET /todos
     def index

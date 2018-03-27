@@ -1,6 +1,6 @@
 Apipie.configure do |config|
   config.app_name                = "TodosApi"
-  config.api_base_url            = "/api"
+  config.api_base_url            = ""
   config.doc_base_url            = "/apipie"
   config.translate = false
   # where is your API defined?

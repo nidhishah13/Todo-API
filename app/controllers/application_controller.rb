@@ -10,6 +10,7 @@ class ApplicationController < ActionController::API
 
     def self.set_pagination_headers(name, options = {})
       after_action(options) do |controller|
+        binding.pry
         results = instance_variable_get("@#{name}")
         headers["X-Pagination"] = {
           total: results.total_entries,

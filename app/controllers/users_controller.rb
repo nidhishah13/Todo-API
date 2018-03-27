@@ -3,6 +3,13 @@ class UsersController < ApplicationController
 
   # POST /signup
   # return authenticated token upon signup
+  api :POST, '/signup', "Creates a new user"
+  param :user_params, Hash, :desc => "Param description" do
+    param :name, String, :desc => "Name of the user", :required => true
+    param :email, String, :desc => "Email of the user", :required => true
+    param :password, String, :desc => "Password of the user", :required => true
+    param :password_confirmation, String, :desc => "Confirmation of password", :required => true
+  end
   def create
     user = User.create!(user_params)
     auth_token = AuthenticateUser.new(user.email, user.password).call

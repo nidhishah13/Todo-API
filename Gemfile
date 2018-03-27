@@ -13,6 +13,7 @@ gem 'jwt'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'will_paginate', '~> 3.1.0'
 gem 'faker'
+gem 'apipie-rails'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -32,7 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.5'
 end

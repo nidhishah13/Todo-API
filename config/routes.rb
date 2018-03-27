@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  apipie
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   # namespace the controllers without affecting the URI
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
   
-  root 'todos#index'
+  root 'authentication#authenticate'
   post 'auth/login', to: 'authentication#authenticate'
   post 'signup', to: 'users#create'
   post 'auth/logout', to: 'authentication#logout'

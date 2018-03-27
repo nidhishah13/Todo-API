@@ -21,14 +21,14 @@ module V1
 
     # GET /todos/:id
     api :GET, '/todos/:id', "This shows the todo of given id"
-    param :id, Integer, :desc => "Todo_id"
+    param :id, Integer, :desc => "Todo_id", :required => true
     def show
       json_response(@todo)
     end
 
     # PUT /todos/:id
     api :PUT, '/todos/:id', "This updates the todo"
-    param :id, Integer, :desc => "Todo_id"
+    param :id, Integer, :desc => "Todo_id", :required => true
     param :title, String, :desc => "Title of the todo"
     def update
       @todo.update(todo_params)
@@ -37,7 +37,7 @@ module V1
 
     # DELETE /todos/:id
     api :DELETE, '/todos/:id', "This deletes the todo"
-    param :id, Integer, :desc => "Todo_id"
+    param :id, Integer, :desc => "Todo_id", :required => true
     def destroy
       @todo.destroy
       head :no_content

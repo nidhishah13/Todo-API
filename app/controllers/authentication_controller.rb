@@ -3,6 +3,7 @@ class AuthenticationController < ApplicationController
 
   # return auth token once user is authenticated
   api :POST, '/auth/login', "User login"
+  error 500, "Server crashed."
   param :email, String, :desc => "Email of the user", required: true
   param :password, String, :desc => "Password of the user", required: true
   def authenticate
@@ -12,6 +13,7 @@ class AuthenticationController < ApplicationController
   end
 
   api :POST, '/auth/logout', "User logout"
+  error 500, "Server crashed."
   def logout
     auth_token = nil
     json_response(auth_token: auth_token)

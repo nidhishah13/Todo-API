@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # POST /signup
   # return authenticated token upon signup
   api :POST, '/signup', "Creates a new user"
+  error 500, "Server crashed."
   param :user_params, Hash, :desc => "Param description" do
     param :name, String, :desc => "Name of the user", :required => true
     param :email, String, :desc => "Email of the user", :required => true

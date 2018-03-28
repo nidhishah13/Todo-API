@@ -14,7 +14,10 @@ Rails.application.routes.draw do
     end
   end
   
-  root 'authentication#authenticate'
+  # resources :users, only: [:create]
+  # root to: 'authentication#authenticate'
+  # root controller: 'authentication', action: 'authenticate'
+  root "static#show"
   post 'auth/login', to: 'authentication#authenticate'
   post 'signup', to: 'users#create'
   post 'auth/logout', to: 'authentication#logout'

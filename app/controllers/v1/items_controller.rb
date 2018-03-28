@@ -4,8 +4,8 @@ module V1
     before_action :set_todo_item, only: [:show, :update, :destroy]
 
     def_param_group :todo_item do
-      param :todo_id, Integer, :desc => "Todo_id of the item", :required => true
-      param :id, Integer, :desc => "Item_id", :required => true
+      param :todo_id, String, :desc => "Todo_id of the item", :required => true
+      param :id, String, :desc => "Item_id", :required => true
     end
 
     def_param_group :item_param do
@@ -15,13 +15,15 @@ module V1
 
     # GET /todos/:todo_id/items
     api :GET, '/todos/:todo_id/items', "This shows items of given todo_id"
-    param :todo_id, Integer, :desc => "Todo_id of the items", :required => true
+    error 500, 'Server crashed.'
+    param :todo_id, String, :desc => "Todo_id of the items", :required => true
     def index
       json_response(@todo.items)
     end
 
     # GET /todos/:todo_id/items/:id
     api :GET, '/todos/:todo_id/items/:id', "This shows the item"
+    error 500, 'Server crashed.'
     param_group :todo_item
     def show
       json_response(@item)
@@ -29,7 +31,8 @@ module V1
 
     # POST /todos/:todo_id/items
     api :POST, '/todos/:todo_id/items', "This creates the item"
-    param :todo_id, Integer, :desc => "Todo_id of the item", required: true   
+    error 500, 'Server crashed.'
+    param :todo_id, String, :desc => "Todo_id of the item", required: true   
     param_group :item_param
     def create
       item = @todo.items.create!(item_params)
@@ -38,6 +41,7 @@ module V1
 
     # PUT /todos/:todo_id/items/:id
     api :PUT, '/todos/:todo_id/items/:id', "This updates the item"
+    error 500, 'Server crashed.'
     param_group :todo_item
     param_group :item_param
     def update
@@ -48,6 +52,7 @@ module V1
 
     # DELETE /todos/:todo_id/items/:id
     api :DELETE, '/todos/:todo_id/items/:id', "This deletes the item"
+    error 500, 'Server crashed.'
     param_group :todo_item
     def destroy
       @item.destroy

@@ -1,0 +1,380 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "TodosApi (params in:formData)",
+    "description": "\n<p>Another API description</p>\n",
+    "version": "1.0",
+    "x-copyright": null
+  },
+  "basePath": "",
+  "consumes": [
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
+  ],
+  "paths": {
+    "/todos": {
+      "get": {
+        "tags": [
+          "todos"
+        ],
+        "operationId": "get_todos",
+        "summary": "This is index of all todos",
+        "parameters": [
+
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "todos"
+        ],
+        "operationId": "post_todos",
+        "summary": "This creates a new todo",
+        "parameters": [
+          {
+            "name": "title",
+            "type": "string",
+            "in": "formData",
+            "required": true,
+            "description": "Title of the todo"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      }
+    },
+    "/todos/{id}": {
+      "get": {
+        "tags": [
+          "todos"
+        ],
+        "operationId": "get_todos_id",
+        "summary": "This shows the todo of given id",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "Todo_id"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "todos"
+        ],
+        "operationId": "put_todos_id",
+        "summary": "This updates the todo",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Todo_id"
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "in": "formData",
+            "description": "Title of the todo"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "todos"
+        ],
+        "operationId": "delete_todos_id",
+        "summary": "This deletes the todo",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Todo_id"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      }
+    },
+    "/todos/{todo_id}/items": {
+      "get": {
+        "tags": [
+          "items"
+        ],
+        "operationId": "get_todos_todo_id_items",
+        "summary": "This shows items of given todo_id",
+        "parameters": [
+          {
+            "name": "todo_id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Todo_id of the items"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "items"
+        ],
+        "operationId": "post_todos_todo_id_items",
+        "summary": "This creates the item",
+        "parameters": [
+          {
+            "name": "done",
+            "type": "boolean",
+            "in": "formData",
+            "required": true,
+            "description": "Item done or not"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "in": "formData",
+            "required": true,
+            "description": "Name of the item"
+          },
+          {
+            "name": "todo_id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Todo_id of the item"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      }
+    },
+    "/todos/{todo_id}/items/{id}": {
+      "get": {
+        "tags": [
+          "items"
+        ],
+        "operationId": "get_todos_todo_id_items_id",
+        "summary": "This shows the item",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Item_id"
+          },
+          {
+            "name": "todo_id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Todo_id of the item"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "items"
+        ],
+        "operationId": "put_todos_todo_id_items_id",
+        "summary": "This updates the item",
+        "parameters": [
+          {
+            "name": "done",
+            "type": "boolean",
+            "in": "formData",
+            "required": true,
+            "description": "Item done or not"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "in": "formData",
+            "required": true,
+            "description": "Name of the item"
+          },
+          {
+            "name": "id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Item_id"
+          },
+          {
+            "name": "todo_id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Todo_id of the item"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "items"
+        ],
+        "operationId": "delete_todos_todo_id_items_id",
+        "summary": "This deletes the item",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Item_id"
+          },
+          {
+            "name": "todo_id",
+            "type": "number",
+            "in": "path",
+            "required": true,
+            "description": "Todo_id of the item"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      }
+    },
+    "/signup": {
+      "post": {
+        "tags": [
+          "users"
+        ],
+        "operationId": "post_signup",
+        "summary": "Creates a new user",
+        "parameters": [
+          {
+            "name": "user_params[password_confirmation]",
+            "type": "string",
+            "in": "formData",
+            "required": true,
+            "description": "Confirmation of password"
+          },
+          {
+            "name": "user_params[password]",
+            "type": "string",
+            "in": "formData",
+            "required": true,
+            "description": "Password of the user"
+          },
+          {
+            "name": "user_params[email]",
+            "type": "string",
+            "in": "formData",
+            "required": true,
+            "description": "Email of the user"
+          },
+          {
+            "name": "user_params[name]",
+            "type": "string",
+            "in": "formData",
+            "required": true,
+            "description": "Name of the user"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "authentication"
+        ],
+        "operationId": "post_auth_login",
+        "summary": "User login",
+        "parameters": [
+          {
+            "name": "password",
+            "type": "string",
+            "in": "formData",
+            "required": true,
+            "description": "Password of the user"
+          },
+          {
+            "name": "email",
+            "type": "string",
+            "in": "formData",
+            "required": true,
+            "description": "Email of the user"
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "tags": [
+          "authentication"
+        ],
+        "operationId": "post_auth_logout",
+        "summary": "User logout",
+        "parameters": [
+
+        ],
+        "responses": {
+          "500": {
+            "description": "Server crashed."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+  },
+  "tags": [
+
+  ],
+  "host": "localhost:3000"
+}

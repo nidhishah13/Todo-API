@@ -1,0 +1,821 @@
+{
+  "docs": {
+    "name": "TodosApi",
+    "info": "\n<p>Another API description</p>\n",
+    "copyright": null,
+    "doc_url": "/apipie/1.0",
+    "api_url": "",
+    "resources": {
+      "todos": {
+        "doc_url": "/apipie/1.0/todos",
+        "api_url": "",
+        "name": "Todos",
+        "short_description": null,
+        "full_description": null,
+        "version": "1.0",
+        "formats": null,
+        "metadata": null,
+        "methods": [
+          {
+            "doc_url": "/apipie/1.0/todos/index",
+            "name": "index",
+            "apis": [
+              {
+                "api_url": "/todos",
+                "http_method": "GET",
+                "short_description": "This is index of all todos",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          },
+          {
+            "doc_url": "/apipie/1.0/todos/create",
+            "name": "create",
+            "apis": [
+              {
+                "api_url": "/todos",
+                "http_method": "POST",
+                "short_description": "This creates a new todo",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "title",
+                "full_name": "title",
+                "description": "\n<p>Title of the todo</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a String",
+                "expected_type": "string",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          },
+          {
+            "doc_url": "/apipie/1.0/todos/show",
+            "name": "show",
+            "apis": [
+              {
+                "api_url": "/todos/:id",
+                "http_method": "GET",
+                "short_description": "This shows the todo of given id",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "id",
+                "full_name": "id",
+                "description": "\n<p>Todo_id</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a String",
+                "expected_type": "string",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          },
+          {
+            "doc_url": "/apipie/1.0/todos/update",
+            "name": "update",
+            "apis": [
+              {
+                "api_url": "/todos/:id",
+                "http_method": "PUT",
+                "short_description": "This updates the todo",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "id",
+                "full_name": "id",
+                "description": "\n<p>Todo_id</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              },
+              {
+                "name": "title",
+                "full_name": "title",
+                "description": "\n<p>Title of the todo</p>\n",
+                "required": false,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a String",
+                "expected_type": "string",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          },
+          {
+            "doc_url": "/apipie/1.0/todos/destroy",
+            "name": "destroy",
+            "apis": [
+              {
+                "api_url": "/todos/:id",
+                "http_method": "DELETE",
+                "short_description": "This deletes the todo",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "id",
+                "full_name": "id",
+                "description": "\n<p>Todo_id</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          }
+        ],
+        "headers": null,
+        "deprecated": null
+      },
+      "items": {
+        "doc_url": "/apipie/1.0/items",
+        "api_url": "",
+        "name": "Items",
+        "short_description": null,
+        "full_description": null,
+        "version": "1.0",
+        "formats": null,
+        "metadata": null,
+        "methods": [
+          {
+            "doc_url": "/apipie/1.0/items/index",
+            "name": "index",
+            "apis": [
+              {
+                "api_url": "/todos/:todo_id/items",
+                "http_method": "GET",
+                "short_description": "This shows items of given todo_id",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "todo_id",
+                "full_name": "todo_id",
+                "description": "\n<p>Todo_id of the items</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          },
+          {
+            "doc_url": "/apipie/1.0/items/show",
+            "name": "show",
+            "apis": [
+              {
+                "api_url": "/todos/:todo_id/items/:id",
+                "http_method": "GET",
+                "short_description": "This shows the item",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "todo_id",
+                "full_name": "todo_id",
+                "description": "\n<p>Todo_id of the item</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              },
+              {
+                "name": "id",
+                "full_name": "id",
+                "description": "\n<p>Item_id</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          },
+          {
+            "doc_url": "/apipie/1.0/items/create",
+            "name": "create",
+            "apis": [
+              {
+                "api_url": "/todos/:todo_id/items",
+                "http_method": "POST",
+                "short_description": "This creates the item",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "todo_id",
+                "full_name": "todo_id",
+                "description": "\n<p>Todo_id of the item</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              },
+              {
+                "name": "name",
+                "full_name": "name",
+                "description": "\n<p>Name of the item</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a String",
+                "expected_type": "string",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              },
+              {
+                "name": "done",
+                "full_name": "done",
+                "description": "\n<p>Item done or not</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be one of: <code>true</code>, <code>false</code>.",
+                "expected_type": "string",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          },
+          {
+            "doc_url": "/apipie/1.0/items/update",
+            "name": "update",
+            "apis": [
+              {
+                "api_url": "/todos/:todo_id/items/:id",
+                "http_method": "PUT",
+                "short_description": "This updates the item",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "todo_id",
+                "full_name": "todo_id",
+                "description": "\n<p>Todo_id of the item</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              },
+              {
+                "name": "id",
+                "full_name": "id",
+                "description": "\n<p>Item_id</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              },
+              {
+                "name": "name",
+                "full_name": "name",
+                "description": "\n<p>Name of the item</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a String",
+                "expected_type": "string",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              },
+              {
+                "name": "done",
+                "full_name": "done",
+                "description": "\n<p>Item done or not</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be one of: <code>true</code>, <code>false</code>.",
+                "expected_type": "string",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          },
+          {
+            "doc_url": "/apipie/1.0/items/destroy",
+            "name": "destroy",
+            "apis": [
+              {
+                "api_url": "/todos/:todo_id/items/:id",
+                "http_method": "DELETE",
+                "short_description": "This deletes the item",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "todo_id",
+                "full_name": "todo_id",
+                "description": "\n<p>Todo_id of the item</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              },
+              {
+                "name": "id",
+                "full_name": "id",
+                "description": "\n<p>Item_id</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Integer",
+                "expected_type": "numeric",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          }
+        ],
+        "headers": null,
+        "deprecated": null
+      },
+      "users": {
+        "doc_url": "/apipie/1.0/users",
+        "api_url": "",
+        "name": "Users",
+        "short_description": null,
+        "full_description": null,
+        "version": "1.0",
+        "formats": null,
+        "metadata": null,
+        "methods": [
+          {
+            "doc_url": "/apipie/1.0/users/create",
+            "name": "create",
+            "apis": [
+              {
+                "api_url": "/signup",
+                "http_method": "POST",
+                "short_description": "Creates a new user",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "user_params",
+                "full_name": "user_params",
+                "description": "\n<p>Param description</p>\n",
+                "required": false,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a Hash",
+                "expected_type": "hash",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ],
+                "params": [
+                  {
+                    "name": "name",
+                    "full_name": "user_params[name]",
+                    "description": "\n<p>Name of the user</p>\n",
+                    "required": true,
+                    "allow_nil": false,
+                    "allow_blank": false,
+                    "validator": "Must be a String",
+                    "expected_type": "string",
+                    "metadata": null,
+                    "show": true,
+                    "validations": [
+
+                    ]
+                  },
+                  {
+                    "name": "email",
+                    "full_name": "user_params[email]",
+                    "description": "\n<p>Email of the user</p>\n",
+                    "required": true,
+                    "allow_nil": false,
+                    "allow_blank": false,
+                    "validator": "Must be a String",
+                    "expected_type": "string",
+                    "metadata": null,
+                    "show": true,
+                    "validations": [
+
+                    ]
+                  },
+                  {
+                    "name": "password",
+                    "full_name": "user_params[password]",
+                    "description": "\n<p>Password of the user</p>\n",
+                    "required": true,
+                    "allow_nil": false,
+                    "allow_blank": false,
+                    "validator": "Must be a String",
+                    "expected_type": "string",
+                    "metadata": null,
+                    "show": true,
+                    "validations": [
+
+                    ]
+                  },
+                  {
+                    "name": "password_confirmation",
+                    "full_name": "user_params[password_confirmation]",
+                    "description": "\n<p>Confirmation of password</p>\n",
+                    "required": true,
+                    "allow_nil": false,
+                    "allow_blank": false,
+                    "validator": "Must be a String",
+                    "expected_type": "string",
+                    "metadata": null,
+                    "show": true,
+                    "validations": [
+
+                    ]
+                  }
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          }
+        ],
+        "headers": null,
+        "deprecated": null
+      },
+      "authentication": {
+        "doc_url": "/apipie/1.0/authentication",
+        "api_url": "",
+        "name": "Authentication",
+        "short_description": null,
+        "full_description": null,
+        "version": "1.0",
+        "formats": null,
+        "metadata": null,
+        "methods": [
+          {
+            "doc_url": "/apipie/1.0/authentication/authenticate",
+            "name": "authenticate",
+            "apis": [
+              {
+                "api_url": "/auth/login",
+                "http_method": "POST",
+                "short_description": "User login",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+              {
+                "name": "email",
+                "full_name": "email",
+                "description": "\n<p>Email of the user</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a String",
+                "expected_type": "string",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              },
+              {
+                "name": "password",
+                "full_name": "password",
+                "description": "\n<p>Password of the user</p>\n",
+                "required": true,
+                "allow_nil": false,
+                "allow_blank": false,
+                "validator": "Must be a String",
+                "expected_type": "string",
+                "metadata": null,
+                "show": true,
+                "validations": [
+
+                ]
+              }
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          },
+          {
+            "doc_url": "/apipie/1.0/authentication/logout",
+            "name": "logout",
+            "apis": [
+              {
+                "api_url": "/auth/logout",
+                "http_method": "POST",
+                "short_description": "User logout",
+                "deprecated": null
+              }
+            ],
+            "formats": null,
+            "full_description": "",
+            "errors": [
+
+            ],
+            "params": [
+
+            ],
+            "examples": [
+
+            ],
+            "metadata": null,
+            "see": [
+
+            ],
+            "headers": [
+
+            ],
+            "show": true
+          }
+        ],
+        "headers": null,
+        "deprecated": null
+      }
+    }
+  }
+}
